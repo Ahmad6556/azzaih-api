@@ -49,6 +49,7 @@ app.get('/', (req, res) => {
 
 app.get("/mnuat", (req, res) => {
   azzaih.find()
+  .sort({ "name": 1 })
     .then((result) => {
       res.render("mnuat", { item: result });
     })
