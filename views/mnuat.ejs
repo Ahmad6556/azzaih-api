@@ -60,9 +60,13 @@
   <nav class="nav" style="text-align: right; width: 25%; height: 100%; flex-wrap: wrap;
   flex-direction: column;">
     <% item.forEach(item=> { %>
-      <button class="btn text-white my-1 mx-1" style="background-color: rgb(13, 110, 253)"
-        onclick="azzaih('<%= item.URL %>')"><%= item.name %></button>
-      <% }) %>
+      <% if (item.name !=null) { %>
+        <button class="btn text-white my-1 mx-1" style="background-color: rgb(13, 110, 253)"
+          onclick="azzaih('<%= item.URL %>')">
+          <%= item.name %>
+        </button>
+        <% } %>
+          <% }) %>
 
   </nav>
 </body>
