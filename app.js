@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3000 || process.env.PORT
 const azzaih = require("./models/azzaih");
 
 app.use(express.static('public'))
