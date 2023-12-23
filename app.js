@@ -49,9 +49,35 @@ app.get('/', (req, res) => {
 
 app.get("/mnuat", (req, res) => {
   azzaih.find()
-  .sort({ "name": 1 })
+    .sort({ "name": 1 })
     .then((result) => {
       res.render("mnuat", { item: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+})
+
+//mouled
+
+app.get("/mouled", (req, res) => {
+  azzaih.find()
+    .sort({ "name": 1 })
+    .then((result) => {
+      res.render("mouled", { item: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+})
+
+//wfah
+
+app.get("/wfah", (req, res) => {
+  azzaih.find()
+    .sort({ "name": 1 })
+    .then((result) => {
+      res.render("wfah", { item: result });
     })
     .catch((err) => {
       console.log(err);
