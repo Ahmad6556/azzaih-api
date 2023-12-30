@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000 || process.env.PORT
 const azzaih = require("./models/azzaih");
+const mlass = require("./models/mlass");
 
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
@@ -83,6 +84,35 @@ app.get("/wfah", (req, res) => {
       console.log(err);
     });
 })
+
+//mlass
+
+app.get("/mlass", (req, res) => {
+  mlass.find()
+  .then((result) => {
+    res.render("mlass", {item: result})
+  })
+    .catch((err) => {
+      console.log(err);
+    });
+})
+
+app.get("/mlass/:id", (req, res) => {
+  mlass.findById(req.params.id)
+    .then((resultM) => {
+      azzaih.find()
+      .then((result) => {
+        res.render("mlassI", { item: result, itemM: resultM });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+})
+
 
 //support
 
