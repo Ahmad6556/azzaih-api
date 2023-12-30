@@ -53,8 +53,13 @@
   </center>
   <nav class="nav">
     <% item.forEach(item=> { %>
-      <a class="btn btn-info my-2 mx-2" href="/mlass/<%= item._id %>"><%= item.name %></a>
-      <% }) %>
+      <% if (item.name=="أختر النوع" ) { %>
+        <a class="btn btn-info my-2 mx-2" href="/mlass/<%= item._id %>">أخرى</a>
+        <% }else{ %>
+          <a class="btn btn-info my-2 mx-2" href="/mlass/<%= item._id %>">
+            <%= item.name %>
+          </a>
+          <% }}) %>
 
   </nav>
 </body>
