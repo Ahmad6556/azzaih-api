@@ -85,6 +85,19 @@ app.get("/wfah", (req, res) => {
     });
 })
 
+//duaa
+
+app.get("/duaa", (req, res) => {
+  azzaih.find()
+    .sort({ "name": 1 })
+    .then((result) => {
+      res.render("duaa", { item: result });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+})
+
 //mlass
 
 app.get("/mlass", (req, res) => {
