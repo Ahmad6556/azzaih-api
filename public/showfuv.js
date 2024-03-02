@@ -11,7 +11,7 @@ for (let i = 0; i < 100000; i++) {
 function azzaihf(URL, U_s, N_s) {
     document.getElementById("section").innerHTML = `
     <button id="a${U_s}" class="btn text-white my-1 mx-1" style="background-color: rgb(255, 0, 0)" onclick="deleteOne(${U_s}, ${N_s})">
-    حذف الكل
+    حذف ${localStorage.getItem(N_s)}y
     </button>
     <br>
     <link rel="stylesheet" href="/iframe.css">
