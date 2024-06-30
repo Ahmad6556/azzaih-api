@@ -29,7 +29,7 @@
 
 <body class="bg-dark" dir="rtl">
   <header class="mb-5">
-    <nav class="navbar navbar-expand-lg" style="background-color: cadetblue;">
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(119, 44, 44);">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">عزائي</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -72,7 +72,7 @@
     <center>
       <% a=0; item.forEach(item=> { a+=1; %>
         <% if (item.alnooa=="عزاء" && item.name !=null) { %>
-          <button class="btn  my-1 mx-1" style="background-color: rgb(13, 110, 253)"
+          <button class="btn  my-1 mx-1" style="background-color: rgb(253, 13, 61)"
             id="<%= item.URL %>" onclick="sellect_fuv('<%= a %>','<%= item.name %>','<%= item.URL %>')">
             <%= item.name %>
           </button>

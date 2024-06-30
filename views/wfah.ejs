@@ -29,7 +29,7 @@
 
 <body class="bg-dark" dir="rtl">
   <header class="mb-5">
-    <nav class="navbar navbar-expand-lg" style="background-color: cadetblue;">
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(119, 44, 44);">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">عزائي</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -71,11 +71,18 @@
   <nav class="nav" style="text-align: right; width: 25%; height: 100%; flex-wrap: wrap;
   flex-direction: column;">
     <% item.forEach(item=> { %>
-      <% if (item.name != null && item.alnooa == "وفاة") { %>
-      <button class="btn text-white my-1 mx-1" style="background-color: rgb(13, 110, 253)"
-        onclick="azzaih('<%= item.URL %>')"><%= item.name %></button>
-        <% } %>
-      <% }) %>
+      <% if (item.name !=null && item.alnooa=="وفاة" ) { %>
+        <button class="btn text-white my-1 mx-1" style="background-color: rgb(253, 13, 61)"
+          onclick="azzaih('<%= item.URL %>')">
+          <%= item.name %>
+        </button>
+        <% } if(item.name !=null && item.alnooa=="مباشر" ){ %>
+          <button class="btn text-white my-1 mx-1" style="background-color: rgb(255, 0, 0)"
+            onclick="azzaih('<%= item.URL %>')">
+            <%= item.name %>
+          </button>
+
+          <% }}) %>
 
   </nav>
 </body>

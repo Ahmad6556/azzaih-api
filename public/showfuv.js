@@ -1,6 +1,6 @@
 for (let i = 0; i < 100000; i++) {
     if (localStorage.getItem(`1${i}`) != null) {
-        document.getElementById("nav").innerHTML += ` <button class="btn text-white my-1 mx-1" style="background-color: rgb(13, 110, 253)"
+        document.getElementById("nav").innerHTML += ` <button class="btn text-white my-1 mx-1" style="background-color: rgb(253, 13, 61)""
         id="${localStorage.getItem(`0${i}`)}" onclick="azzaihf('${localStorage.getItem(`0${i}`)}', '0${i}', '1${i}')">
         ${localStorage.getItem(`1${i}`)}
         </button> `
