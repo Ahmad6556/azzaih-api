@@ -1,6 +1,0 @@
-[build]
-  command = "npm run start"
-  publish = ".express"
-
-[[plugins]]
-  package = "@netlify/plugin-expressjs"
