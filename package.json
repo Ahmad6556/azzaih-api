@@ -8,7 +8,7 @@
     "nodemon": "^3.0.2"
   },
   "scripts": {
-    "start": "node app.js",
+    "build": "npm run some-build-command",
     "watch": "nodemon --ext js,ejs --ignore public"
   }
 }
